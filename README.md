@@ -1,1 +1,24 @@
-# Videocakes\nVideocakes is a project that generates videos based on text prompts using AI models.\n\n## What it does\nVideocakes uses a combination of natural language processing and computer vision to generate videos based on user input.\n\n## Key Features\n* Generates videos based on text prompts\n* Uses AI models for natural language processing and computer vision\n* Supports customization of video generation parameters\n\n## Tech Stack\n* Python 3.11\n* Flask for web API\n* Modal for cloud computing\n* Git for version control\n* FFmpeg for video processing\n\n## Installation\n1. Clone the repository: `git clone https://github.com/\<your-username\>/Videocakes.git`\n2. Install dependencies: `pip install -r requirements.txt`\n3. Set up Modal: follow the instructions on the Modal website\n\n## Usage\n1. Start the web API: `gunicorn app:app`\n2. Send a POST request to the `/generate` endpoint with the desired parameters:\n```json\n{\n  "prompt": "A cat walking on the beach",\n  "seed": 42,\n  "negative_prompt": "low quality, blurry",\n  "steps": 30\n}\n```\n\n## Required Environment Variables\n* `MODAL_WEBHOOK_URL`: the URL of the Modal webhook\n* `PORT`: the port number to use for the web API (default: 5000)
+# Videocakes
+Videocakes is a video generation API that utilizes ComfyUI and Modal to produce high-quality videos based on user input.
+## What it does
+The API takes in a prompt, seed, negative prompt, and steps as input, and generates a video using the ComfyUI model.
+## Key Features
+- Video generation using ComfyUI model
+- Supports custom prompts, seeds, and negative prompts
+- Utilizes Modal for scalable and efficient processing
+## Tech Stack
+- ComfyUI: A video generation model
+- Modal: A platform for building and deploying scalable applications
+- Flask: A web framework for building the API
+- Python: The programming language used for the project
+## Installation
+To install the project, follow these steps:
+- Clone the repository: git clone https://github.com/\[username]\/Videocakes.git
+- Install the requirements: pip install -r requirements.txt
+## Usage
+To use the API, send a POST request to the /generate endpoint with the following JSON body:
+```\n{\n  "prompt": "A cat walking on the beach",\n  "seed": 42,\n  "negative_prompt": "low quality",\n  "steps": 30\n}\n```
+## Environment Variables
+The following environment variables are required:
+- MODAL_WEBHOOK_URL: The URL of the Modal webhook
+- PORT: The port number to run the API on (default: 5000)
